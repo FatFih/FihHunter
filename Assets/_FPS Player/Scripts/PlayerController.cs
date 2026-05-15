@@ -222,7 +222,7 @@ public class PlayerController : MonoBehaviour
         if (isSprinting() && isCrouching())
             Uncrouch();
 
-        movement.Move(playerInput.input, isSprinting(), isCrouching());
+        movement.Move(playerInput.raw, isSprinting(), isCrouching());
         if (movement.grounded && playerInput.Jump())
         {
             if (status == Status.crouching)
