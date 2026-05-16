@@ -42,7 +42,7 @@ public class WallrunMovement : MovementType
 
         float inputGravity = (1f - s) + (s / 4f); //More input, less gravity
         float timeGravity = Mathf.Lerp(0f, 1f, wallrunTime / wallrunMinimum);
-        movement.Move(move, movement.runSpeed, inputGravity * timeGravity);
+        movement.Move(move, movement.runSpeed  * 1.6f, inputGravity * timeGravity);
         wallrunTime += Time.deltaTime;
     }
 
