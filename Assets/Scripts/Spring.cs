@@ -10,8 +10,8 @@ public class Spring
 
     public void Update(float deltaTime)
     {
-        var direction = target - value >= 0 ? 1f : -1f;
-        var force = Mathf.Abs(target - value) * strength;
+        float direction = target - value >= 0 ? 1f : -1f;
+        float force = Mathf.Abs(target - value) * strength;
         velocity += (force * direction - velocity * damper) * deltaTime;
         value += velocity * deltaTime;
     }
@@ -22,30 +22,12 @@ public class Spring
         value = 0f;
     }
 
-    public void SetValue(float value)
-    {
-        this.value = value;
-    }
-
-    public void SetTarget(float target)
-    {
-        this.target = target;
-    }
-
-    public void SetDamper(float damper)
-    {
-        this.damper = damper;
-    }
-
-    public void SetStrength(float strength)
-    {
-        this.strength = strength;
-    }
-
-    public void SetVelocity(float velocity)
-    {
-        this.velocity = velocity;
-    }
+    public void SetValue(float val) { value = val; }
+    public void SetTarget(float t) { target = t; }
+    public void SetDamper(float d) { damper = d; }
+    public void SetStrength(float s) { strength = s; }
+    public void SetVelocity(float v) { velocity = v; }
 
     public float Value => value;
+    public float Velocity => velocity;
 }

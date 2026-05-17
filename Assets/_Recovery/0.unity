@@ -744,8 +744,9 @@ GameObject:
   - component: {fileID: 236047889}
   - component: {fileID: 236047888}
   - component: {fileID: 236047887}
-  - component: {fileID: 236047886}
   - component: {fileID: 236047892}
+  - component: {fileID: 236047886}
+  - component: {fileID: 236047891}
   m_Layer: 0
   m_Name: Grapple Gun
   m_TagString: Untagged
@@ -957,6 +958,47 @@ Transform:
   - {fileID: 443864140}
   m_Father: {fileID: 1074174500}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!114 &236047891
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 236047885}
+  m_Enabled: 0
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 95ffd19bf36a00442b7726a95bc53dc5, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: Assembly-CSharp::GrapplingRope
+  grapplingGun: {fileID: 562893776}
+  quality: 40
+  waveCount: 6
+  waveHeight: 3
+  ropeSnapSpeed: 12
+  affectCurve:
+    serializedVersion: 2
+    m_Curve:
+    - serializedVersion: 3
+      time: 0
+      value: 0
+      inSlope: 0
+      outSlope: 0
+      tangentMode: 0
+      weightedMode: 0
+      inWeight: 0
+      outWeight: 0
+    - serializedVersion: 3
+      time: 0.49667358
+      value: 0.5014267
+      inSlope: 0
+      outSlope: 0
+      tangentMode: 0
+      weightedMode: 0
+      inWeight: 0
+      outWeight: 0
+    m_PreInfinity: 2
+    m_PostInfinity: 0
+    m_RotationOrder: 4
 --- !u!114 &236047892
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -972,20 +1014,10 @@ MonoBehaviour:
   grappling: {fileID: 562893776}
   gunTip: {fileID: 443864140}
   segments: 20
-  extendSpeed: 12
-  springStrength: 80
-  springDamper: 7
-  springLaunchVelocity: 22
-  waveHeight: 0.5
-  waveCount: 3.5
-  waveTravelSpeed: 6
-  wave3DAmount: 0.7
-  ropeDamping: 0.99
-  gravityScale: 1
+  extendSpeed: 20
+  damping: 0.99
+  gravityScale: 0.5
   constraintIterations: 10
-  fovIncrease: 5
-  fovDecaySpeed: 4
-  fovReturnDuration: 0.25
 --- !u!1 &395294773
 GameObject:
   m_ObjectHideFlags: 0
