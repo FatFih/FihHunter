@@ -19,6 +19,7 @@ public class Grappling : MonoBehaviour
     public float grappleSpeed = 35f;
 
     private Vector3 grapplePoint;
+    private Vector3 grappleNormal;
     private Vector3 currentGrapplePosition;
 
     [Header("Cooldown")]
@@ -82,6 +83,7 @@ public class Grappling : MonoBehaviour
         {
             grappling = true;
             grapplePoint = hit.point;
+            grappleNormal = hit.normal;
             currentGrapplePosition = gunTip.position;
 
             pm.freeze = true;
@@ -107,7 +109,22 @@ public class Grappling : MonoBehaviour
         {
             Vector3 dir = (grapplePoint - pm.transform.position).normalized;
 
-            // SAFE MOVE (no explosion velocity)
+            if (Mathf.Abs(dir.y) > 0.05f)
+            {
+                Vector3 hDir = new Vector3(dir.x, 0f, dir.z);
+                float hMag = hDir.magnitude;
+
+                if (hMag > 0.05f)
+                {
+                    dir = hDir / hMag * Mathf.Sqrt(1f - 0.05f * 0.05f) + Vector3.up * (0.05f * Mathf.Sign(dir.y));
+                }
+                else
+                {
+                    float scale = 0.05f / Mathf.Abs(dir.y);
+                    dir = new Vector3(dir.x * scale, dir.y * scale, dir.z * scale);
+                }
+            }
+
             pm.controller.Move(dir * grappleSpeed * Time.deltaTime);
 
             yield return null;
