@@ -990,6 +990,33 @@ MonoBehaviour:
   fovIncrease: 10
   fovDecaySpeed: 4
   fovReturnDuration: 2
+--- !u!1 &278488787 stripped
+GameObject:
+  m_CorrespondingSourceObject: {fileID: 919132149155446097, guid: fa47fc8abb9cbd242b6f885d3f0f33c9, type: 3}
+  m_PrefabInstance: {fileID: 2118592717}
+  m_PrefabAsset: {fileID: 0}
+--- !u!95 &278488788
+Animator:
+  serializedVersion: 7
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 278488787}
+  m_Enabled: 1
+  m_Avatar: {fileID: 0}
+  m_Controller: {fileID: 9100000, guid: c2799fb3e28e5f0438dab1c549a8d7e7, type: 2}
+  m_CullingMode: 0
+  m_UpdateMode: 0
+  m_ApplyRootMotion: 0
+  m_LinearVelocityBlending: 0
+  m_StabilizeFeet: 0
+  m_AnimatePhysics: 0
+  m_WarningMessage: 
+  m_HasTransformHierarchy: 1
+  m_AllowConstantClipSamplingOptimization: 1
+  m_KeepAnimatorStateOnDisable: 0
+  m_WriteDefaultValuesOnDisable: 0
 --- !u!1001 &316473388
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -1439,6 +1466,19 @@ MonoBehaviour:
   grappleSpeed: 35
   grapplingCd: 0.75
   grappleKey: 102
+--- !u!114 &562893790
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 562893761}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 9f4d13c7075a53a4680a1db872c88b48, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: Assembly-CSharp::GrapplingAnimation
+  myAnimator: {fileID: 278488788}
 --- !u!1 &581570620
 GameObject:
   m_ObjectHideFlags: 0
@@ -2870,6 +2910,9 @@ PrefabInstance:
     - targetCorrespondingSourceObject: {fileID: 7085721664118310506, guid: c2dc14f109b09a743b03757ef68006c7, type: 3}
       insertIndex: -1
       addedObject: {fileID: 562893776}
+    - targetCorrespondingSourceObject: {fileID: 7085721664118310506, guid: c2dc14f109b09a743b03757ef68006c7, type: 3}
+      insertIndex: -1
+      addedObject: {fileID: 562893790}
     - targetCorrespondingSourceObject: {fileID: 7085721663646366572, guid: c2dc14f109b09a743b03757ef68006c7, type: 3}
       insertIndex: -1
       addedObject: {fileID: 1074174499}
@@ -3439,7 +3482,10 @@ PrefabInstance:
     - targetCorrespondingSourceObject: {fileID: -8679921383154817045, guid: fa47fc8abb9cbd242b6f885d3f0f33c9, type: 3}
       insertIndex: -1
       addedObject: {fileID: 443864140}
-    m_AddedComponents: []
+    m_AddedComponents:
+    - targetCorrespondingSourceObject: {fileID: 919132149155446097, guid: fa47fc8abb9cbd242b6f885d3f0f33c9, type: 3}
+      insertIndex: -1
+      addedObject: {fileID: 278488788}
   m_SourcePrefab: {fileID: 100100000, guid: fa47fc8abb9cbd242b6f885d3f0f33c9, type: 3}
 --- !u!1001 &8776337672151875180
 PrefabInstance:
