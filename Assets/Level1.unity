@@ -67381,7 +67381,7 @@ MonoBehaviour:
   orientation: {fileID: 809628371}
   playerCam: {fileID: 90098844}
   dashForce: 20
-  dashUpwardForce: 4
+  dashUpwardForce: 2
   maxDashYSpeed: 15
   dashDuration: 0.25
   dashSound: {fileID: 8300000, guid: 38ddcd2a32041fc44b4cc68b565b0cb3, type: 3}
@@ -67391,7 +67391,7 @@ MonoBehaviour:
   allowAllDirections: 1
   disableGravity: 1
   resetVel: 1
-  dashCd: 1.5
+  dashCd: 3
   dashKey: 101
 --- !u!114 &976644485
 MonoBehaviour:
@@ -67400,7 +67400,7 @@ MonoBehaviour:
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 976644480}
-  m_Enabled: 1
+  m_Enabled: 0
   m_EditorHideFlags: 0
   m_Script: {fileID: 11500000, guid: ff6e52d681338e04aa8714068311b174, type: 3}
   m_Name: 
