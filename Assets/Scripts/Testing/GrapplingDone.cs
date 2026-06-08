@@ -12,7 +12,7 @@ public class GrapplingDone : MonoBehaviour
     public LineRenderer lr;
 
     [Header("Grappling")]
-    public float maxGrappleDistance = 25f;
+    public float maxGrappleDistance = 200f;
     public float grappleDelayTime = 0.5f;
     public float overshootYAxis = 2f;
     public AudioClip grappleSound;
